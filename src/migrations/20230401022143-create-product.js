@@ -3,7 +3,10 @@
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Products', {
       id: {
-        allowNull: false, autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER
+        allowNull: false, 
+        autoIncrement: true, 
+        primaryKey: true, 
+        type: Sequelize.INTEGER
       },
       prod_type: {
         type: Sequelize.ENUM,
@@ -11,16 +14,22 @@
         defaultValue: "cosmetic",
       },
       name: {
-        type: Sequelize.STRING, allowNull: false,
+        type: Sequelize.STRING,
+        allowNull: false,
       }, price: {
-        type: Sequelize.FLOAT, defaultValue: 0, allowNull: false,
+        type: Sequelize.FLOAT, 
+        defaultValue: 0, 
+        allowNull: false,
       }, instock: {
-        type: Sequelize.INTEGER, defaultValue: 0, allowNull: false,
+        type: Sequelize.INTEGER,
+        defaultValue: 0, 
+        allowNull: false,
       }, image: {
         type: Sequelize.STRING
       },
       createdAt: {
-        allowNull: false, type: Sequelize.DATE
+        allowNull: false, 
+        type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: false,
